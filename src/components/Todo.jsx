@@ -44,6 +44,7 @@ const Todo = ({ todo, removeTodo, updateTodo }) => {
           <p>{todo.text}</p>
           <p>{todo.description}</p>
           <p className='category'>({todo.category})</p>
+          <p>{todo.date} - {todo.time}</p>
         </div>
       )}
       <div>
