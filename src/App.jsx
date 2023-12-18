@@ -3,8 +3,10 @@ import './App.css';
 import Todo from './components/todo';
 import TodoForm from './components/todoForm';
 
+
 function App() {
   const [todos, setTodos] = useState([]);
+  const currentDate = new Date();
 
   const addTodo = (text, description, category) => {
     const newTodos = [
@@ -14,7 +16,8 @@ function App() {
         text,
         description,
         category,
-        isCompleted: false,
+        date: currentDate.toLocaleDateString(), // Obtém a data atual
+        time: currentDate.toLocaleTimeString(), // Obtém a hora atual
       },
     ];
     setTodos(newTodos);
